@@ -1,0 +1,43 @@
+.header-section {
+  text-align: center;
+  margin-bottom: 50px;
+  background: linear-gradient(135deg, #1A73E8, #0B63C5);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.header-name {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.header-contact {
+  font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.header-contact-item a {
+  color: #E3F2FD;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.header-contact-item a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.header-divider {
+  width: 100%;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.6);
+  margin-top: 20px;
+  border-radius: 10px;
+}

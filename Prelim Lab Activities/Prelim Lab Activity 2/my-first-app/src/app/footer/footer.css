@@ -1,0 +1,32 @@
+.footer-section {
+  text-align: center;
+  padding: 25px 0;
+  background: #1A73E8;
+  color: white;
+  margin-top: 50px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.footer-text {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.footer-links {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.footer-links a {
+  color: #E3F2FD;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: white;
+  text-decoration: underline;
+}
