@@ -1,0 +1,52 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-form-field appearance="outline">
+    <mat-label>Username</mat-label>
+    <input matInput formControlName="username">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email">
+    <mat-error *ngIf="form.get('email')?.invalid">Invalid email</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Password</mat-label>
+    <input matInput type="password" formControlName="password">
+  </mat-form-field>
+
+  <mat-radio-group formControlName="gender">
+    <mat-radio-button value="male">Male</mat-radio-button>
+    <mat-radio-button value="female">Female</mat-radio-button>
+  </mat-radio-group>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Address</mat-label>
+    <input matInput formControlName="address">
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Birth Date</mat-label>
+    <input matInput [matDatepicker]="picker" formControlName="birthDate">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-slider formControlName="skillLevel" min="1" max="10" step="1" thumbLabel></mat-slider>
+
+  <mat-checkbox formControlName="terms">Accept Terms</mat-checkbox>
+
+  <button mat-raised-button color="primary" type="submit">Submit</button>
+</form>
+
+<div *ngIf="submitted" class="result-card">
+  <h2>Form Result</h2>
+  <p><strong>Username:</strong> {{ result.username }}</p>
+  <p><strong>Email:</strong> {{ result.email }}</p>
+  <p><strong>Password:</strong> {{ result.password }}</p>
+  <p><strong>Gender:</strong> {{ result.gender }}</p>
+  <p><strong>Address:</strong> {{ result.address }}</p>
+  <p><strong>Birth Date:</strong> {{ result.birthDate | date }}</p>
+  <p><strong>Skill Level:</strong> {{ result.skillLevel }}</p>
+  <p><strong>Terms Accepted:</strong> {{ result.terms }}</p>
+</div>
